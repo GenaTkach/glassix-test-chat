@@ -1,16 +1,16 @@
 .messages {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 6px;
 }
 
-.message {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2px;
-    width: 100%;
-}
+/*.message {*/
+/*    width: max-content;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    row-gap: 2px;*/
+/*    width: 100%;*/
+/*}*/
 
 .text {
     padding: 10px;

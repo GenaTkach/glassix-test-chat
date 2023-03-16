@@ -20,19 +20,17 @@ const MainPage = () => {
 
     const clickHandler = () => {
         const isDisabled = Object.values(values).some(value => !value);
-        // Если нет никакого значения в полях инпут, то никуда не переходить
         if (!isDisabled) {
             setVisible(!isChatVisible);
         }
-        ;
-
     }
 
     if (isChatVisible) {
-        return <Chat name={values[NAME]}/>
+        return <Chat name={values[NAME]} room={values[ROOM]}/>
     }
 
-    return (<div className={styles.wrap}>
+    return (
+        <div className={styles.wrap}>
             <div className={styles.container}>
                 <h1 className={styles.heading}>Join</h1>
                 <form className={styles.form}>
@@ -53,7 +51,6 @@ const MainPage = () => {
                             onChange={handleChange}
                             className={styles.input}
                             type={"text"}
-                            name='room'
                             value={values[ROOM]}
                             name='room'
                             placeholder="Room"
